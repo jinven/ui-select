@@ -79,8 +79,8 @@ angular.module('plunkr', [])
     // Load the manifest for the example
     var defaultFiles = {
       'demo.js': './assets/',
-      'select.css': './dist',
-      'select.js': './dist'
+      'select.css': '../dist',
+      'select.js': '../dist'
     };
     files = angular.copy(defaultFiles);
     files[exampleFile] = './';
