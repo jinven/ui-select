@@ -36,6 +36,24 @@
               </li>
             </ul>
           </section>
+          <section id="allother" ng-controller="allotherCtrl as vm">
+
+            <h3>全部与其他</h3>
+            <ui-select
+              multiple
+              ng-model="vm.codes"
+              theme="bootstrap"
+              close-on-select="false"
+              on-remove="vm.onRemove($item, $model)"
+              on-select="vm.onSelect($item, $model)"
+              style="width: 300px;"
+            >
+              <ui-select-match placeholder="请选择">{{$item.name}}</ui-select-match>
+              <ui-select-choices repeat="op.code as op in vm.options">
+                {{op.name}}
+              </ui-select-choices>
+            </ui-select>
+          </section>
           <section id="documenation">
             <div ng-view></div>
           </section>
